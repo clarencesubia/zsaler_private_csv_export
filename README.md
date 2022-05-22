@@ -1,12 +1,12 @@
 
 # csvAppSegExportZPA
 
-This tool helps in taking all the application segments in your ZPA and saves it in CSV format.
+This tool helps in taking all the application segments and global policies in your ZPA and saves it in CSV format.
 
 
 # Use Case
 
-This tool is developed to help administrators to export a copy of all application segments published in Zscaler Private Access.
+This tool is developed to help administrators to export a copy of all application segments and global policies published in Zscaler Private Access.
 
 # Installation
 
@@ -51,6 +51,7 @@ git clone git@github.com:meliodaaf/csvAppSegExportZPA.git
 [*] Retrieving apps from page 6.
 [*] Retrieving apps from page 7.
 Reached last page.
+[*] Retrieving Global Policies
 ```
 #### After successful run, CSV file should be generated.
 ## API Reference
@@ -74,11 +75,17 @@ Reached last page.
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `page`      | `string` | `Default value: 1`              |
-| `pagesize` | `string` | `Value is up to 500`|
+| `pagesize` | `string` | `Value is up to 500`             |
+
+#### Global Policies
+```http
+  GET /mgmtconfig/v1/admin/customers/{customerId}/policySet/global
+```
+
 
 ## Roadmap
 
-    1. Add export for Policies
+    1. Add export for Policies - Done
     2. Correlate Application Segments and Policies
 
 #### Links:
