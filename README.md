@@ -1,5 +1,5 @@
 
-# csvAppSegExportZPA
+# csvExportZPA
 
 This tool helps in taking all the application segments and global policies in your ZPA and saves it in CSV format.
 
